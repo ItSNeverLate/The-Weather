@@ -32,6 +32,15 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'armeabi', 'armeabi-v7a', 'x86'
+            universalApk true
+        }
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.the_weather"

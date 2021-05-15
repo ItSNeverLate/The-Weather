@@ -32,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: <Widget>[
           Image.asset(
@@ -182,7 +183,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Center(
                   child: Text(
                     cityName.toUpperCase(),
-                    style: TextStyle(fontSize: 35.0),
+                    style: TextStyle(fontSize: 25.0),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               )
